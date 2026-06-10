@@ -1,0 +1,192 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.5);
+  overflow: hidden;
+}
+
+.tabHeader {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.tabsList {
+  display: flex;
+  overflow-x: auto;
+}
+
+.tabButton {
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--foreground-secondary);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tabButton:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.activeTab {
+  color: var(--accent-laravel);
+  border-bottom-color: var(--accent-laravel);
+}
+
+/* Subtabs (e.g. Livewire class vs view) */
+.subTabsList {
+  display: flex;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid var(--border-color);
+  gap: 8px;
+}
+
+.subTabButton {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--foreground-secondary);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subTabButton:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.activeSubTab {
+  background: rgba(var(--accent-laravel-rgb), 0.15);
+  border-color: rgba(var(--accent-laravel-rgb), 0.3);
+  color: #ffffff;
+}
+
+/* Tab Panels Content */
+.tabContent {
+  padding: 20px;
+  flex: 1;
+}
+
+.codeWrapper {
+  display: flex;
+  flex-direction: column;
+  background: #060913;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fileName {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--foreground-secondary);
+}
+
+.langTag {
+  font-size: 9px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.codeBlock {
+  padding: 20px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+/* Explanation Panel */
+.explanationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #d1d5db;
+}
+
+.explanationTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.explanationText {
+  font-size: 14.5px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* Tips and Tricks section */
+.tipsSection {
+  background: rgba(var(--accent-sql-rgb), 0.05);
+  border: 1px solid rgba(var(--accent-sql-rgb), 0.15);
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 8px;
+}
+
+.tipsTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #a5b4fc; /* Indigo/blue label */
+  margin-bottom: 12px;
+}
+
+.tipsIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.tipsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 4px;
+}
+
+.tipsList li {
+  font-size: 13.5px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 16px;
+}
+
+.tipsList li::before {
+  content: '→';
+  color: var(--accent-laravel);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
